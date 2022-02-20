@@ -1,14 +1,18 @@
-.filter-item + .filter-item {
+.portfolio-content__list {
+    @include justify-list;
+    margin-bottom: 50px;
+    }
+
+.filter-list__item {
+    & +& {
     margin-left: 8px;
+    }
 }
 
-.filter-btn {
-font-family: inherit;    
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
+.filter-list__btn {
+font-family: inherit; 
+@include font (null, 500, 16px, 1.62, 0.03em);    
 text-align: center;
-letter-spacing: 0.03em;
 border: 0px;
 border-radius: 4px;
 padding-top: 6px;
@@ -24,44 +28,38 @@ transition: color 250ms var(--timing-function), background-color 250ms var(--tim
     }
 }
 
-.filter-list {
-display: flex;
-margin-bottom: 50px;
-justify-content: center;
-}
-
-.projects-list {
+.projects {
 display: flex;
 margin-left: -30px;
 margin-bottom: -30px;
 flex-wrap: wrap;
 }
 
-.projects-item {
+.projects__item {
 flex-basis: calc(100% / 9 - 30px);
 margin-left: 30px;
 margin-bottom: 30px;
 }
 
-.projects-item-link {
+.projects__link {
     display: inline-block;
     transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
         &:hover,
         &:focus {
         background-color: #FFFFFF;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-        .project-overlay{
+        .projects__overlay{
             transform: translateY(0%);
             }
     }
 }
     
-.project-tumb {
+.projects__tumb {
     position: relative;
     overflow: hidden;
 }
 
-.project-overlay { 
+.projects__overlay { 
 position: absolute;
 top: 0;
 left: 0;
@@ -72,14 +70,22 @@ transform: translateY(150%);
 transition: transform 250ms var(--timing-function);
 }
 
-.project-text {
+.projects__text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.project-content {
+.projects__hover {
+    width: 322px;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--hero-text-color);
+    }
+
+.projects__content {
 background: #FFFFFF;
 border: 1px solid #EEEEEE;
 border-top: 0px;
@@ -88,26 +94,18 @@ padding: 20px 24px;
 position: relative;
 }
 
-.project-name {
-font-size: 18px;
-line-height: 2.00;
-letter-spacing: 0.06em;
+.projects__name {
+@include font (null, 700, 18px, 2.00, 0.06em);
 color: var(--filter-title-color);
 margin-top: 20px;
 margin-bottom: 4px;
 }
 
-.project-type {
+.projects__type {
+@include font (null, null, 16px, 1.87, 0.03em);
 font-size: 16px;
 line-height: 1.87;
 letter-spacing: 0.03em;
 color: var(--about-desc-color);
 }
 
-.hover-text {
-width: 322px;
-font-size: 18px;
-line-height: 1.56;
-letter-spacing: 0.03em;
-color: var(--hero-text-color);
-}
