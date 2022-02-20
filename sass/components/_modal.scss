@@ -28,7 +28,7 @@
     padding: 40px;
 }
 
-.modal-title {
+.modal__title {
 @include font (null, 700, 20px, 1.15, 0.03em);
 text-align: center;
 color: var(--about-subtitle-color);
@@ -42,13 +42,13 @@ flex-direction: column;
 
 }
 
-.form-field {
+.form__field {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
 
-.form-label {
+.form__label {
 display: block;
 @include font (null, null, 12px, 1.16, 0.01em);
 color: #757575;
@@ -56,11 +56,11 @@ margin-bottom: 4px;
 position: relative;
 }
 
-.modal-input-wrap {
+.form__wrap {
 position: relative;
 }
 
-.form-input {
+.form__input {
 width: 100%;
 height: 40px;
 border: 1px solid rgba(33, 33, 33, 0.2);
@@ -75,23 +75,23 @@ transition: border-color 250ms var(--timing-function);
 }
 }
 
-.modal-icon {
+.form__icon {
 position: absolute;
 top: 50%;
 left: 12px;
 transform: translateY(-50%);
 transition: filter 250ms var(--timing-function), fill 250ms var(--timing-function) ;
-    .form-input:focus + & {
+    .form__input:focus + & {
     fill: var(--accent-color);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 }
 
-.modal-comment {
+.form__modal-comment {
 margin-bottom: -10px;
 }
 
-.form-comment {
+.form__comment {
 width: 100%;
 height: 120px;
 padding: 12px 16px;
@@ -116,17 +116,23 @@ margin-bottom: 30px;
 justify-content: center;
 }
 
-.modal-check-text {
+.form__check-input {
+    &:checked + .form__check-text > span {
+    background-color: #2196F3;
+    border: none;
+    }
+    &:checked + .form__check-text svg {
+    fill: var(--footer-logo-color);
+    }
+}
+
+.form__check-text {
 @include align-list;
 @include font (null, null, 14px, 1.71, 0.03em);
 color: #757575;
 }
 
-.modal-check-icon {
-fill: transparent;
-}
-
-.modal-check-text span {
+.form__check-text span {
 @include align-list;
 justify-content: center;
 width: 16px;
@@ -134,23 +140,22 @@ height: 15px;
 border: 2px solid var(--about-subtitle-color);
 border-radius: 2px;
 margin-right: 7px;
-
 }
 
-.modal-check {
-    &:checked + .modal-check-text > span {
-    background-color: #2196F3;
-    border: none;
-    }
-    &:checked + .modal-check-text svg {
-    fill: var(--footer-logo-color);
-    }
+.form__check-icon {
+fill: transparent;
 }
-.modal-submit {
+
+.form__policy-link {
+text-decoration-line: underline;
+color: #2196F3;
+}
+
+.form__submit {
     text-align: center;
 }
 
-.modal-submit-btn {
+.form__submit-btn {
 width: 200px;
 height: 50px;
 background: #2196F3;
@@ -161,10 +166,7 @@ border: none;
 color: #FFFFFF;
 }
 
-.policy-link {
-text-decoration-line: underline;
-color: #2196F3;
-}
+
 
 .close-modal {
     position: absolute;
@@ -177,7 +179,7 @@ color: #2196F3;
     right: 8px
 }
 
-.close-modal-icon {
+.close-modal__icon {
 padding: auto;
 cursor: pointer;
 transition: fill 250ms var(--timing-function);

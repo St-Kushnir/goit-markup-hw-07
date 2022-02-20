@@ -582,7 +582,7 @@ textarea {
   padding: 40px;
 }
 
-.modal-title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -598,13 +598,13 @@ textarea {
   flex-direction: column;
 }
 
-.form-field {
+.form__field {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.form-label {
+.form__label {
   display: block;
   font-size: 12px;
   line-height: 1.16;
@@ -614,11 +614,11 @@ textarea {
   position: relative;
 }
 
-.modal-input-wrap {
+.form__wrap {
   position: relative;
 }
 
-.form-input {
+.form__input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -630,11 +630,11 @@ textarea {
   transition: border-color 250ms var(--timing-function);
 }
 
-.form-input:focus {
+.form__input:focus {
   border-color: var(--accent-color);
 }
 
-.modal-icon {
+.form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -642,16 +642,16 @@ textarea {
   transition: filter 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
-.form-input:focus + .modal-icon {
+.form__input:focus + .form__icon {
   fill: var(--accent-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.modal-comment {
+.form__modal-comment {
   margin-bottom: -10px;
 }
 
-.form-comment {
+.form__comment {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
@@ -663,11 +663,11 @@ textarea {
   transition: border-color 250ms var(--timing-function);
 }
 
-.form-comment:focus {
+.form__comment:focus {
   border-color: var(--accent-color);
 }
 
-.form-comment::placeholder {
+.form__comment::placeholder {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
@@ -682,7 +682,16 @@ textarea {
   justify-content: center;
 }
 
-.modal-check-text {
+.form__check-input:checked + .form__check-text > span {
+  background-color: #2196F3;
+  border: none;
+}
+
+.form__check-input:checked + .form__check-text svg {
+  fill: var(--footer-logo-color);
+}
+
+.form__check-text {
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -691,11 +700,7 @@ textarea {
   color: #757575;
 }
 
-.modal-check-icon {
-  fill: transparent;
-}
-
-.modal-check-text span {
+.form__check-text span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -706,20 +711,20 @@ textarea {
   margin-right: 7px;
 }
 
-.modal-check:checked + .modal-check-text > span {
-  background-color: #2196F3;
-  border: none;
+.form__check-icon {
+  fill: transparent;
 }
 
-.modal-check:checked + .modal-check-text svg {
-  fill: var(--footer-logo-color);
+.form__policy-link {
+  text-decoration-line: underline;
+  color: #2196F3;
 }
 
-.modal-submit {
+.form__submit {
   text-align: center;
 }
 
-.modal-submit-btn {
+.form__submit-btn {
   width: 200px;
   height: 50px;
   background: #2196F3;
@@ -733,11 +738,6 @@ textarea {
   color: #FFFFFF;
 }
 
-.policy-link {
-  text-decoration-line: underline;
-  color: #2196F3;
-}
-
 .close-modal {
   position: absolute;
   width: 30px;
@@ -749,13 +749,13 @@ textarea {
   right: 8px;
 }
 
-.close-modal-icon {
+.close-modal__icon {
   padding: auto;
   cursor: pointer;
   transition: fill 250ms var(--timing-function);
 }
 
-.close-modal-icon:hover {
+.close-modal__icon:hover {
   fill: var(--accent-color);
 }
 
