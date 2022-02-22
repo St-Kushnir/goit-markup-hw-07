@@ -1,4 +1,4 @@
-.about-team {
+.section--other-background {
     background: #F5F4FA;
 }
 
@@ -24,13 +24,13 @@ padding-top: 30px;
 padding-bottom: 30px;
 }
 
-.team-list__person {
+.team-list__title {
     @include font (null, 500, 16px, 1.18, 0.03em);
     color: var(--title-text-color);
     margin-bottom: 10px;
 }
 
-.team-list__speciality {
+.team-list__text {
 @include font (null, null, 16px, 1.18, 0.03em);
 color: var(--about-desc-color);
 margin-bottom: 16px;

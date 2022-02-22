@@ -4,7 +4,7 @@
     border-bottom: 1px solid #ECECEC;
 }
 
-.header__content {
+.header__container {
     @include align-list;
 }
 
@@ -36,7 +36,7 @@
 }
 
 
-.nav-underline::after {
+.nav-list__link--underline::after {
     content: "";
     position: absolute;
     left: 0;
@@ -66,7 +66,7 @@ margin-left: auto;
     transition: color 250ms var(--timing-function);
 }
 
-.header-link__mail, .header-link__tel {
+.header-link__contacts {
 @extend %header-links;
     &:hover,
     &:focus{
@@ -74,7 +74,7 @@ margin-left: auto;
     }
 }
 
-.header-link__mail-icon, .header-link__tel-icon {
+.header-link__icons {
 fill: currentColor;
 margin-right: 10px;
 }

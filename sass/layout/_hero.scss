@@ -11,11 +11,8 @@
     
 }
 
-.hero-content {
-    
-}
 
-.hero-content__slogan {
+.hero__title {
     @include font (null, 900, 44px, 1.36, 0.06em); 
     text-align: center;
     text-transform: uppercase;
@@ -23,7 +20,7 @@
     width: 696px;
     margin: 0 auto;
 }
-.hero-content__btn {
+.hero__btn {
 font-family: inherit;
 @include font (null, 700, 16px, 1.87, 0.06em); 
 background-color: var(--accent-color);

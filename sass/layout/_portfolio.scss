@@ -70,14 +70,14 @@ transform: translateY(150%);
 transition: transform 250ms var(--timing-function);
 }
 
-.projects__text {
+.projects__hover {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.projects__hover {
+.projects__text-hover {
     width: 322px;
     font-size: 18px;
     line-height: 1.56;
@@ -94,14 +94,14 @@ padding: 20px 24px;
 position: relative;
 }
 
-.projects__name {
+.projects__title {
 @include font (null, 700, 18px, 2.00, 0.06em);
 color: var(--filter-title-color);
 margin-top: 20px;
 margin-bottom: 4px;
 }
 
-.projects__type {
+.projects__text {
 @include font (null, null, 16px, 1.87, 0.03em);
 font-size: 16px;
 line-height: 1.87;

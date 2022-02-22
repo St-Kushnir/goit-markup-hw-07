@@ -21,19 +21,15 @@
     display: flex;
     }
     
-    .about-list__subtitle {
+    .about-list__title {
         @include font (null, 700, 14px, 1.14, 0.03em);
         text-transform: uppercase;
         color: var(--about-subtitle-color);
-        
-    }
-
-    .subtitle {
         margin-bottom: 10px;
         margin-top: 30px;
     }
 
-    .about-list__desc {
+    .about-list__description {
         @include font (null, null, 14px, 1.71, 0.03em);
         color: var(--about-desc-color);
     }
